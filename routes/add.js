@@ -13,7 +13,7 @@ exports.addFriend = function(req, res) { 
 	};
 
 
-	console.log(newFriend)
+	console.log(newFriend);
 
 	data.friends.push(newFriend);
 
