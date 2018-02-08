@@ -3,7 +3,23 @@
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
+	//$(".name").click(function(){
+	//	console.log("clicked on name");
+	//});
+
+
+	$('.name a').click(function(e){
+		e.preventDefault();
+		var name = $(this).text();
+		var newName = anagrammedName(name);
+		$(this).html("<h3><a>"+newName+"</a><h3>");
+
+	});
 })
+
+
+
+
 
 /*
  * Function that is called when the document is ready.
@@ -11,6 +27,7 @@ $(document).ready(function() {
 function initializePage() {
 	console.log("Javascript connected!");
 }
+
 
 function anagrammedName(name) {
 	// Thanks, Internet Anagram Server!
